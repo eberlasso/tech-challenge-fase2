@@ -13,21 +13,10 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>restaurant-management</name>
 	<description>Tech Challenge Fase 2 - Sistema de Gestão de Restaurantes</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>21</java.version>
+		<flyway.version>9.22.3</flyway.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -90,6 +79,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 	</dependencies>
 
