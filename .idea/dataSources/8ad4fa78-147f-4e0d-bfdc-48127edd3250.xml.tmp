@@ -25393,4 +25393,2297 @@ true posixrules
       <CallRoutineName>timestamp_gt_timestamptz</CallRoutineName>
       <CallRoutineIdentity>(timestamp,timestamp with time zone)</CallRoutineIdentity>
       <CommuteOperatorName>&lt;</CommuteOperatorName>
-      <CommuteOperatorIdentity>(&quot;char&quot;,
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2275" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp|0s</LeftStoredType>
+      <ObjectId>2375</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp|0s</RightStoredType>
+      <CallRoutineName>timestamp_gt</CallRoutineName>
+      <CallRoutineIdentity>(timestamp,timestamp)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2276" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>time|0s</LeftStoredType>
+      <ObjectId>2388</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>time|0s</RightStoredType>
+      <CallRoutineName>time_gt</CallRoutineName>
+      <CallRoutineIdentity>(time,time)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2277" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsquery|0s</LeftStoredType>
+      <ObjectId>2538</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsquery|0s</RightStoredType>
+      <CallRoutineName>tsquery_gt</CallRoutineName>
+      <CallRoutineIdentity>(tsquery,tsquery)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2278" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsvector|0s</LeftStoredType>
+      <ObjectId>2544</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsvector|0s</RightStoredType>
+      <CallRoutineName>tsvector_gt</CallRoutineName>
+      <CallRoutineIdentity>(tsvector,tsvector)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2279" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>uuid|0s</LeftStoredType>
+      <ObjectId>2975</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>uuid|0s</RightStoredType>
+      <CallRoutineName>uuid_gt</CallRoutineName>
+      <CallRoutineIdentity>(uuid,uuid)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2280" parent="261" name="&gt;">
+      <Comment>greater than by area</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>3225</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_gt</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>areajoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>areasel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2281" parent="261" name="&gt;">
+      <Comment>greater than by area</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>circle|0s</LeftStoredType>
+      <ObjectId>3519</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>circle|0s</RightStoredType>
+      <CallRoutineName>circle_gt</CallRoutineName>
+      <CallRoutineIdentity>(circle,circle)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>areajoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>areasel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2282" parent="261" name="&gt;">
+      <Comment>greater than by length</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>3632</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_gt</CallRoutineName>
+      <CallRoutineIdentity>(lseg,lseg)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+    </operator>
+    <operator id="2283" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>macaddr8|0s</LeftStoredType>
+      <ObjectId>3679</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>macaddr8|0s</RightStoredType>
+      <CallRoutineName>macaddr8_gt</CallRoutineName>
+      <CallRoutineIdentity>(macaddr8,macaddr8)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2284" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>name|0s</LeftStoredType>
+      <ObjectId>2991</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text|0s</RightStoredType>
+      <CallRoutineName>namegttext</CallRoutineName>
+      <CallRoutineIdentity>(name,text)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2285" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>text|0s</LeftStoredType>
+      <ObjectId>3887</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>name|0s</RightStoredType>
+      <CallRoutineName>textgtname</CallRoutineName>
+      <CallRoutineIdentity>(text,name)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2286" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>xid8|0s</LeftStoredType>
+      <ObjectId>3243</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>xid8|0s</RightStoredType>
+      <CallRoutineName>xid8gt</CallRoutineName>
+      <CallRoutineIdentity>(xid8,xid8)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargtsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2287" parent="261" name="&gt;">
+      <Comment>greater than</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>2865</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>multirange_gt</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;=</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2288" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>path|0s</LeftStoredType>
+      <ObjectId>82</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>path|0s</RightStoredType>
+      <CallRoutineName>path_n_ge</CallRoutineName>
+      <CallRoutineIdentity>(path,path)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2289" parent="261" name="&gt;=">
+      <Comment>greater than or equal by area</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>1695</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_ge</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>areajoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>areasel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2290" parent="261" name="&gt;=">
+      <Comment>greater than or equal by area</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>circle|0s</LeftStoredType>
+      <ObjectId>257</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>circle|0s</RightStoredType>
+      <CallRoutineName>circle_ge</CallRoutineName>
+      <CallRoutineIdentity>(circle,circle)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>areajoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>areasel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2291" parent="261" name="&gt;=">
+      <Comment>greater than or equal by length</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>263</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_ge</CallRoutineName>
+      <CallRoutineIdentity>(lseg,lseg)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+    </operator>
+    <operator id="2292" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>&quot;char&quot;|0s</LeftStoredType>
+      <ObjectId>5076</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>&quot;char&quot;|0s</RightStoredType>
+      <CallRoutineName>charge</CallRoutineName>
+      <CallRoutineIdentity>(&quot;char&quot;,&quot;char&quot;)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2293" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyarray|0s</LeftStoredType>
+      <ObjectId>2802</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyarray|0s</RightStoredType>
+      <CallRoutineName>array_ge</CallRoutineName>
+      <CallRoutineIdentity>(anyarray,anyarray)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2294" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyenum|0s</LeftStoredType>
+      <ObjectId>415</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyenum|0s</RightStoredType>
+      <CallRoutineName>enum_ge</CallRoutineName>
+      <CallRoutineIdentity>(anyenum,anyenum)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2295" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>430</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyrange|0s</RightStoredType>
+      <CallRoutineName>range_ge</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anyrange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>rangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2296" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bigint|0s</LeftStoredType>
+      <ObjectId>501</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bigint|0s</RightStoredType>
+      <CallRoutineName>int8ge</CallRoutineName>
+      <CallRoutineIdentity>(bigint,bigint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2297" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bigint|0s</LeftStoredType>
+      <ObjectId>524</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int84ge</CallRoutineName>
+      <CallRoutineIdentity>(bigint,integer)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2298" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bigint|0s</LeftStoredType>
+      <ObjectId>525</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>smallint|0s</RightStoredType>
+      <CallRoutineName>int82ge</CallRoutineName>
+      <CallRoutineIdentity>(bigint,smallint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2299" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bit varying|0s</LeftStoredType>
+      <ObjectId>542</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bit varying|0s</RightStoredType>
+      <CallRoutineName>varbitge</CallRoutineName>
+      <CallRoutineIdentity>(bit varying,bit varying)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2300" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bit|0s</LeftStoredType>
+      <ObjectId>543</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bit|0s</RightStoredType>
+      <CallRoutineName>bitge</CallRoutineName>
+      <CallRoutineIdentity>(bit,bit)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2301" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>boolean|0s</LeftStoredType>
+      <ObjectId>612</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>boolean|0s</RightStoredType>
+      <CallRoutineName>boolge</CallRoutineName>
+      <CallRoutineIdentity>(boolean,boolean)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2302" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bytea|0s</LeftStoredType>
+      <ObjectId>648</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bytea|0s</RightStoredType>
+      <CallRoutineName>byteage</CallRoutineName>
+      <CallRoutineIdentity>(bytea,bytea)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2303" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>char|0s</LeftStoredType>
+      <ObjectId>625</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>char|0s</RightStoredType>
+      <CallRoutineName>bpcharge</CallRoutineName>
+      <CallRoutineIdentity>(char,char)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2304" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>date|0s</LeftStoredType>
+      <ObjectId>634</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>date|0s</RightStoredType>
+      <CallRoutineName>date_ge</CallRoutineName>
+      <CallRoutineIdentity>(date,date)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2305" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>date|0s</LeftStoredType>
+      <ObjectId>663</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp with time zone|0s</RightStoredType>
+      <CallRoutineName>date_ge_timestamptz</CallRoutineName>
+      <CallRoutineIdentity>(date,timestamp with time zone)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2306" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>date|0s</LeftStoredType>
+      <ObjectId>667</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp|0s</RightStoredType>
+      <CallRoutineName>date_ge_timestamp</CallRoutineName>
+      <CallRoutineIdentity>(date,timestamp)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2307" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>double precision|0s</LeftStoredType>
+      <ObjectId>675</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>double precision|0s</RightStoredType>
+      <CallRoutineName>float8ge</CallRoutineName>
+      <CallRoutineIdentity>(double precision,double precision)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2308" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>double precision|0s</LeftStoredType>
+      <ObjectId>796</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>real|0s</RightStoredType>
+      <CallRoutineName>float84ge</CallRoutineName>
+      <CallRoutineIdentity>(double precision,real)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2309" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>inet|0s</LeftStoredType>
+      <ObjectId>905</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>inet|0s</RightStoredType>
+      <CallRoutineName>network_ge</CallRoutineName>
+      <CallRoutineIdentity>(inet,inet)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2310" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>integer|0s</LeftStoredType>
+      <ObjectId>1061</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bigint|0s</RightStoredType>
+      <CallRoutineName>int48ge</CallRoutineName>
+      <CallRoutineIdentity>(integer,bigint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2311" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>integer|0s</LeftStoredType>
+      <ObjectId>1075</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int4ge</CallRoutineName>
+      <CallRoutineIdentity>(integer,integer)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2312" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>integer|0s</LeftStoredType>
+      <ObjectId>1098</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>smallint|0s</RightStoredType>
+      <CallRoutineName>int42ge</CallRoutineName>
+      <CallRoutineIdentity>(integer,smallint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2313" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>interval|0s</LeftStoredType>
+      <ObjectId>1113</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>interval|0s</RightStoredType>
+      <CallRoutineName>interval_ge</CallRoutineName>
+      <CallRoutineIdentity>(interval,interval)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2314" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>1555</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>jsonb|0s</RightStoredType>
+      <CallRoutineName>jsonb_ge</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,jsonb)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2315" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>macaddr8|0s</LeftStoredType>
+      <ObjectId>1125</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>macaddr8|0s</RightStoredType>
+      <CallRoutineName>macaddr8_ge</CallRoutineName>
+      <CallRoutineIdentity>(macaddr8,macaddr8)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2316" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>macaddr|0s</LeftStoredType>
+      <ObjectId>1135</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>macaddr|0s</RightStoredType>
+      <CallRoutineName>macaddr_ge</CallRoutineName>
+      <CallRoutineIdentity>(macaddr,macaddr)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2317" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>money|0s</LeftStoredType>
+      <ObjectId>1325</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>money|0s</RightStoredType>
+      <CallRoutineName>cash_ge</CallRoutineName>
+      <CallRoutineIdentity>(money,money)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2318" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>name|0s</LeftStoredType>
+      <ObjectId>1335</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>name|0s</RightStoredType>
+      <CallRoutineName>namege</CallRoutineName>
+      <CallRoutineIdentity>(name,name)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2319" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>numeric|0s</LeftStoredType>
+      <ObjectId>1505</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>numeric|0s</RightStoredType>
+      <CallRoutineName>numeric_ge</CallRoutineName>
+      <CallRoutineIdentity>(numeric,numeric)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2320" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>oidvector|0s</LeftStoredType>
+      <ObjectId>1590</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>oidvector|0s</RightStoredType>
+      <CallRoutineName>oidvectorge</CallRoutineName>
+      <CallRoutineIdentity>(oidvector,oidvector)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2321" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>oid|0s</LeftStoredType>
+      <ObjectId>1225</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>oid|0s</RightStoredType>
+      <CallRoutineName>oidge</CallRoutineName>
+      <CallRoutineIdentity>(oid,oid)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2322" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>pg_lsn|0s</LeftStoredType>
+      <ObjectId>3367</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>pg_lsn|0s</RightStoredType>
+      <CallRoutineName>pg_lsn_ge</CallRoutineName>
+      <CallRoutineIdentity>(pg_lsn,pg_lsn)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2323" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>real|0s</LeftStoredType>
+      <ObjectId>1206</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>double precision|0s</RightStoredType>
+      <CallRoutineName>float48ge</CallRoutineName>
+      <CallRoutineIdentity>(real,double precision)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2324" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>real|0s</LeftStoredType>
+      <ObjectId>1757</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>real|0s</RightStoredType>
+      <CallRoutineName>float4ge</CallRoutineName>
+      <CallRoutineIdentity>(real,real)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2325" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>record|0s</LeftStoredType>
+      <ObjectId>1789</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>record|0s</RightStoredType>
+      <CallRoutineName>record_ge</CallRoutineName>
+      <CallRoutineIdentity>(record,record)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2326" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>smallint|0s</LeftStoredType>
+      <ObjectId>1809</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>bigint|0s</RightStoredType>
+      <CallRoutineName>int28ge</CallRoutineName>
+      <CallRoutineIdentity>(smallint,bigint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2327" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>smallint|0s</LeftStoredType>
+      <ObjectId>1867</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int24ge</CallRoutineName>
+      <CallRoutineIdentity>(smallint,integer)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2328" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>smallint|0s</LeftStoredType>
+      <ObjectId>1873</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>smallint|0s</RightStoredType>
+      <CallRoutineName>int2ge</CallRoutineName>
+      <CallRoutineIdentity>(smallint,smallint)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2329" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>text|0s</LeftStoredType>
+      <ObjectId>1960</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text|0s</RightStoredType>
+      <CallRoutineName>text_ge</CallRoutineName>
+      <CallRoutineIdentity>(text,text)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2330" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tid|0s</LeftStoredType>
+      <ObjectId>2065</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tid|0s</RightStoredType>
+      <CallRoutineName>tidge</CallRoutineName>
+      <CallRoutineIdentity>(tid,tid)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2331" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>time with time zone|0s</LeftStoredType>
+      <ObjectId>2348</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>time with time zone|0s</RightStoredType>
+      <CallRoutineName>timetz_ge</CallRoutineName>
+      <CallRoutineIdentity>(time with time zone,time with time zone)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2332" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp with time zone|0s</LeftStoredType>
+      <ObjectId>2361</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>date|0s</RightStoredType>
+      <CallRoutineName>timestamptz_ge_date</CallRoutineName>
+      <CallRoutineIdentity>(timestamp with time zone,date)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2333" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp with time zone|0s</LeftStoredType>
+      <ObjectId>2374</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp with time zone|0s</RightStoredType>
+      <CallRoutineName>timestamptz_ge</CallRoutineName>
+      <CallRoutineIdentity>(timestamp with time zone,timestamp with time zone)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2334" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp with time zone|0s</LeftStoredType>
+      <ObjectId>2387</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp|0s</RightStoredType>
+      <CallRoutineName>timestamptz_ge_timestamp</CallRoutineName>
+      <CallRoutineIdentity>(timestamp with time zone,timestamp)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2335" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp|0s</LeftStoredType>
+      <ObjectId>2537</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>date|0s</RightStoredType>
+      <CallRoutineName>timestamp_ge_date</CallRoutineName>
+      <CallRoutineIdentity>(timestamp,date)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2336" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp|0s</LeftStoredType>
+      <ObjectId>2543</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp with time zone|0s</RightStoredType>
+      <CallRoutineName>timestamp_ge_timestamptz</CallRoutineName>
+      <CallRoutineIdentity>(timestamp,timestamp with time zone)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2337" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>timestamp|0s</LeftStoredType>
+      <ObjectId>2977</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>timestamp|0s</RightStoredType>
+      <CallRoutineName>timestamp_ge</CallRoutineName>
+      <CallRoutineIdentity>(timestamp,timestamp)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2338" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>time|0s</LeftStoredType>
+      <ObjectId>3227</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>time|0s</RightStoredType>
+      <CallRoutineName>time_ge</CallRoutineName>
+      <CallRoutineIdentity>(time,time)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2339" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsquery|0s</LeftStoredType>
+      <ObjectId>3521</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsquery|0s</RightStoredType>
+      <CallRoutineName>tsquery_ge</CallRoutineName>
+      <CallRoutineIdentity>(tsquery,tsquery)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2340" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsvector|0s</LeftStoredType>
+      <ObjectId>3631</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsvector|0s</RightStoredType>
+      <CallRoutineName>tsvector_ge</CallRoutineName>
+      <CallRoutineIdentity>(tsvector,tsvector)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2341" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>uuid|0s</LeftStoredType>
+      <ObjectId>3678</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>uuid|0s</RightStoredType>
+      <CallRoutineName>uuid_ge</CallRoutineName>
+      <CallRoutineIdentity>(uuid,uuid)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2342" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>name|0s</LeftStoredType>
+      <ObjectId>2993</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text|0s</RightStoredType>
+      <CallRoutineName>namegetext</CallRoutineName>
+      <CallRoutineIdentity>(name,text)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2343" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>text|0s</LeftStoredType>
+      <ObjectId>3886</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>name|0s</RightStoredType>
+      <CallRoutineName>textgename</CallRoutineName>
+      <CallRoutineIdentity>(text,name)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2344" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>xid8|0s</LeftStoredType>
+      <ObjectId>3245</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>xid8|0s</RightStoredType>
+      <CallRoutineName>xid8ge</CallRoutineName>
+      <CallRoutineIdentity>(xid8,xid8)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>scalargesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2345" parent="261" name="&gt;=">
+      <Comment>greater than or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>2864</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>multirange_ge</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargejoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <NegateOperatorName>&lt;</NegateOperatorName>
+      <NegateOperatorIdentity>(&quot;char&quot;,&quot;char&quot;)</NegateOperatorIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2346" parent="261" name="&gt;&gt;">
+      <Comment>bitwise shift right</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bigint|0s</LeftStoredType>
+      <ObjectId>488</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>bigint|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int8shr</CallRoutineName>
+      <CallRoutineIdentity>(bigint,integer)</CallRoutineIdentity>
+    </operator>
+    <operator id="2347" parent="261" name="&gt;&gt;">
+      <Comment>bitwise shift right</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>bit|0s</LeftStoredType>
+      <ObjectId>496</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>bit|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>bitshiftright</CallRoutineName>
+      <CallRoutineIdentity>(bit,integer)</CallRoutineIdentity>
+    </operator>
+    <operator id="2348" parent="261" name="&gt;&gt;">
+      <Comment>bitwise shift right</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>integer|0s</LeftStoredType>
+      <ObjectId>508</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>integer|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int4shr</CallRoutineName>
+      <CallRoutineIdentity>(integer,integer)</CallRoutineIdentity>
+    </operator>
+    <operator id="2349" parent="261" name="&gt;&gt;">
+      <Comment>bitwise shift right</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>smallint|0s</LeftStoredType>
+      <ObjectId>1509</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>smallint|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int2shr</CallRoutineName>
+      <CallRoutineIdentity>(smallint,integer)</CallRoutineIdentity>
+    </operator>
+    <operator id="2350" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>933</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_right</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2351" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>circle|0s</LeftStoredType>
+      <ObjectId>1796</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>circle|0s</RightStoredType>
+      <CallRoutineName>circle_right</CallRoutineName>
+      <CallRoutineIdentity>(circle,circle)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2352" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>point|0s</LeftStoredType>
+      <ObjectId>1879</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>point_right</CallRoutineName>
+      <CallRoutineIdentity>(point,point)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2353" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>polygon|0s</LeftStoredType>
+      <ObjectId>1885</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>polygon|0s</RightStoredType>
+      <CallRoutineName>poly_right</CallRoutineName>
+      <CallRoutineIdentity>(polygon,polygon)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2354" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>1891</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>multirange_after_multirange</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anymultirange,anymultirange)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2355" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>3894</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyrange|0s</RightStoredType>
+      <CallRoutineName>multirange_after_range</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anyrange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anymultirange,anymultirange)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2356" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>4398</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>range_after_multirange</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anymultirange,anymultirange)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2357" parent="261" name="&gt;&gt;">
+      <Comment>is right of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>4399</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyrange|0s</RightStoredType>
+      <CallRoutineName>range_after</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anyrange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anymultirange,anymultirange)</CommuteOperatorIdentity>
+      <JoinRoutineName>scalargtjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>rangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2358" parent="261" name="&gt;&gt;">
+      <Comment>is supernet</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>inet|0s</LeftStoredType>
+      <ObjectId>4400</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>inet|0s</RightStoredType>
+      <CallRoutineName>network_sup</CallRoutineName>
+      <CallRoutineIdentity>(inet,inet)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anymultirange,anymultirange)</CommuteOperatorIdentity>
+      <JoinRoutineName>networkjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>networksel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2359" parent="261" name="&gt;&gt;=">
+      <Comment>is supernet or equal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>inet|0s</LeftStoredType>
+      <ObjectId>934</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>inet|0s</RightStoredType>
+      <CallRoutineName>network_supeq</CallRoutineName>
+      <CallRoutineIdentity>(inet,inet)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;&lt;=</CommuteOperatorName>
+      <CommuteOperatorIdentity>(inet,inet)</CommuteOperatorIdentity>
+      <JoinRoutineName>networkjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>networksel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2360" parent="261" name="&gt;^">
+      <Comment>is above (allows touching)</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>506</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_above_eq</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2361" parent="261" name="&gt;^">
+      <Comment>deprecated, use |&gt;&gt; instead</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>point|0s</LeftStoredType>
+      <ObjectId>800</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>point_above</CallRoutineName>
+      <CallRoutineIdentity>(point,point)</CallRoutineIdentity>
+      <JoinRoutineName>positionjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>positionsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2362" parent="261" name="?">
+      <Comment>key exists</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>3247</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text|0s</RightStoredType>
+      <CallRoutineName>jsonb_exists</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,text)</CallRoutineIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2363" parent="261" name="?#">
+      <Comment>deprecated, use &amp;&amp; instead</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>798</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_overlap</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <JoinRoutineName>areajoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>areasel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2364" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>line|0s</LeftStoredType>
+      <ObjectId>802</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>inter_lb</CallRoutineName>
+      <CallRoutineIdentity>(line,box)</CallRoutineIdentity>
+    </operator>
+    <operator id="2365" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>line|0s</LeftStoredType>
+      <ObjectId>1525</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>line_intersect</CallRoutineName>
+      <CallRoutineIdentity>(line,line)</CallRoutineIdentity>
+      <CommuteOperatorName>?#</CommuteOperatorName>
+      <CommuteOperatorIdentity>(line,line)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2366" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>1537</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>inter_sb</CallRoutineName>
+      <CallRoutineIdentity>(lseg,box)</CallRoutineIdentity>
+    </operator>
+    <operator id="2367" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>1538</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>inter_sl</CallRoutineName>
+      <CallRoutineIdentity>(lseg,line)</CallRoutineIdentity>
+    </operator>
+    <operator id="2368" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>1539</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_intersect</CallRoutineName>
+      <CallRoutineIdentity>(lseg,lseg)</CallRoutineIdentity>
+      <CommuteOperatorName>?#</CommuteOperatorName>
+      <CommuteOperatorIdentity>(lseg,lseg)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2369" parent="261" name="?#">
+      <Comment>intersect</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>path|0s</LeftStoredType>
+      <ObjectId>1611</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>path|0s</RightStoredType>
+      <CallRoutineName>path_inter</CallRoutineName>
+      <CallRoutineIdentity>(path,path)</CallRoutineIdentity>
+    </operator>
+    <operator id="2370" parent="261" name="?&amp;">
+      <Comment>all keys exist</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>3249</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text[]|0s</RightStoredType>
+      <CallRoutineName>jsonb_exists_all</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,text[])</CallRoutineIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2371" parent="261" name="?-">
+      <Comment>horizontal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>808</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>line_horizontal</CallRoutineName>
+      <CallRoutineIdentity>(line)</CallRoutineIdentity>
+    </operator>
+    <operator id="2372" parent="261" name="?-">
+      <Comment>horizontal</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>1528</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_horizontal</CallRoutineName>
+      <CallRoutineIdentity>(lseg)</CallRoutineIdentity>
+    </operator>
+    <operator id="2373" parent="261" name="?-">
+      <Comment>horizontally aligned</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>point|0s</LeftStoredType>
+      <ObjectId>1614</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>point_horiz</CallRoutineName>
+      <CallRoutineIdentity>(point,point)</CallRoutineIdentity>
+      <CommuteOperatorName>?-</CommuteOperatorName>
+      <CommuteOperatorIdentity>(point,point)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2374" parent="261" name="?-|">
+      <Comment>perpendicular</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>line|0s</LeftStoredType>
+      <ObjectId>1527</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>line_perp</CallRoutineName>
+      <CallRoutineIdentity>(line,line)</CallRoutineIdentity>
+      <CommuteOperatorName>?-|</CommuteOperatorName>
+      <CommuteOperatorIdentity>(line,line)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2375" parent="261" name="?-|">
+      <Comment>perpendicular</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>1613</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_perp</CallRoutineName>
+      <CallRoutineIdentity>(lseg,lseg)</CallRoutineIdentity>
+      <CommuteOperatorName>?-|</CommuteOperatorName>
+      <CommuteOperatorIdentity>(line,line)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2376" parent="261" name="?|">
+      <Comment>vertical</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>809</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>line_vertical</CallRoutineName>
+      <CallRoutineIdentity>(line)</CallRoutineIdentity>
+    </operator>
+    <operator id="2377" parent="261" name="?|">
+      <Comment>vertical</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>1529</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_vertical</CallRoutineName>
+      <CallRoutineIdentity>(lseg)</CallRoutineIdentity>
+    </operator>
+    <operator id="2378" parent="261" name="?|">
+      <Comment>vertically aligned</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>point|0s</LeftStoredType>
+      <ObjectId>1615</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>point_vert</CallRoutineName>
+      <CallRoutineIdentity>(point,point)</CallRoutineIdentity>
+      <CommuteOperatorName>?|</CommuteOperatorName>
+      <CommuteOperatorIdentity>(point,point)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2379" parent="261" name="?|">
+      <Comment>any key exists</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>3248</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>text[]|0s</RightStoredType>
+      <CallRoutineName>jsonb_exists_any</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,text[])</CallRoutineIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2380" parent="261" name="?||">
+      <Comment>parallel</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>line|0s</LeftStoredType>
+      <ObjectId>1526</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>line|0s</RightStoredType>
+      <CallRoutineName>line_parallel</CallRoutineName>
+      <CallRoutineIdentity>(line,line)</CallRoutineIdentity>
+      <CommuteOperatorName>?||</CommuteOperatorName>
+      <CommuteOperatorIdentity>(line,line)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2381" parent="261" name="?||">
+      <Comment>parallel</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>lseg|0s</LeftStoredType>
+      <ObjectId>1612</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_parallel</CallRoutineName>
+      <CallRoutineIdentity>(lseg,lseg)</CallRoutineIdentity>
+      <CommuteOperatorName>?||</CommuteOperatorName>
+      <CommuteOperatorIdentity>(line,line)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2382" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>473</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>bigint|0s</ResultStoredType>
+      <RightStoredType>bigint|0s</RightStoredType>
+      <CallRoutineName>int8abs</CallRoutineName>
+      <CallRoutineIdentity>(bigint)</CallRoutineIdentity>
+    </operator>
+    <operator id="2383" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>590</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>double precision|0s</ResultStoredType>
+      <RightStoredType>double precision|0s</RightStoredType>
+      <CallRoutineName>float8abs</CallRoutineName>
+      <CallRoutineIdentity>(double precision)</CallRoutineIdentity>
+    </operator>
+    <operator id="2384" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>595</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>integer|0s</ResultStoredType>
+      <RightStoredType>integer|0s</RightStoredType>
+      <CallRoutineName>int4abs</CallRoutineName>
+      <CallRoutineIdentity>(integer)</CallRoutineIdentity>
+    </operator>
+    <operator id="2385" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>682</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>numeric|0s</ResultStoredType>
+      <RightStoredType>numeric|0s</RightStoredType>
+      <CallRoutineName>numeric_abs</CallRoutineName>
+      <CallRoutineIdentity>(numeric)</CallRoutineIdentity>
+    </operator>
+    <operator id="2386" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>773</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>real|0s</ResultStoredType>
+      <RightStoredType>real|0s</RightStoredType>
+      <CallRoutineName>float4abs</CallRoutineName>
+      <CallRoutineIdentity>(real)</CallRoutineIdentity>
+    </operator>
+    <operator id="2387" parent="261" name="@">
+      <Comment>absolute value</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>1763</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>smallint|0s</ResultStoredType>
+      <RightStoredType>smallint|0s</RightStoredType>
+      <CallRoutineName>int2abs</CallRoutineName>
+      <CallRoutineIdentity>(smallint)</CallRoutineIdentity>
+    </operator>
+    <operator id="2388" parent="261" name="@-@">
+      <Comment>distance between endpoints</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>799</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>double precision|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_length</CallRoutineName>
+      <CallRoutineIdentity>(lseg)</CallRoutineIdentity>
+    </operator>
+    <operator id="2389" parent="261" name="@-@">
+      <Comment>sum of path segment lengths</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>1591</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>double precision|0s</ResultStoredType>
+      <RightStoredType>path|0s</RightStoredType>
+      <CallRoutineName>path_length</CallRoutineName>
+      <CallRoutineIdentity>(path)</CallRoutineIdentity>
+    </operator>
+    <operator id="2390" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>aclitem[]|0s</LeftStoredType>
+      <ObjectId>490</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>aclitem|0s</RightStoredType>
+      <CallRoutineName>aclcontains</CallRoutineName>
+      <CallRoutineIdentity>(aclitem[],aclitem)</CallRoutineIdentity>
+    </operator>
+    <operator id="2391" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>498</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_contain</CallRoutineName>
+      <CallRoutineIdentity>(box,box)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2392" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>box|0s</LeftStoredType>
+      <ObjectId>433</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>box_contain_pt</CallRoutineName>
+      <CallRoutineIdentity>(box,point)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2393" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>circle|0s</LeftStoredType>
+      <ObjectId>755</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>circle|0s</RightStoredType>
+      <CallRoutineName>circle_contain</CallRoutineName>
+      <CallRoutineIdentity>(circle,circle)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2394" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>circle|0s</LeftStoredType>
+      <ObjectId>757</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>circle_contain_pt</CallRoutineName>
+      <CallRoutineIdentity>(circle,point)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2395" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>path|0s</LeftStoredType>
+      <ObjectId>759</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>path_contain_pt</CallRoutineName>
+      <CallRoutineIdentity>(path,point)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+    </operator>
+    <operator id="2396" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>polygon|0s</LeftStoredType>
+      <ObjectId>968</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>point|0s</RightStoredType>
+      <CallRoutineName>poly_contain_pt</CallRoutineName>
+      <CallRoutineIdentity>(polygon,point)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2397" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>polygon|0s</LeftStoredType>
+      <ObjectId>1511</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>polygon|0s</RightStoredType>
+      <CallRoutineName>poly_contain</CallRoutineName>
+      <CallRoutineIdentity>(polygon,polygon)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>contsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2398" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyarray|0s</LeftStoredType>
+      <ObjectId>2751</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyarray|0s</RightStoredType>
+      <CallRoutineName>arraycontains</CallRoutineName>
+      <CallRoutineIdentity>(anyarray,anyarray)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>arraycontjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>arraycontsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2399" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>3693</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyelement|0s</RightStoredType>
+      <CallRoutineName>range_contains_elem</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anyelement)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>rangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2400" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>3889</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyrange|0s</RightStoredType>
+      <CallRoutineName>range_contains</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anyrange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>rangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2401" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>3890</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>jsonb|0s</RightStoredType>
+      <CallRoutineName>jsonb_contains</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,jsonb)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2402" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsquery|0s</LeftStoredType>
+      <ObjectId>3246</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsquery|0s</RightStoredType>
+      <CallRoutineName>tsq_mcontains</CallRoutineName>
+      <CallRoutineIdentity>(tsquery,tsquery)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2403" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>2869</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyelement|0s</RightStoredType>
+      <CallRoutineName>multirange_contains_elem</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anyelement)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2404" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>2870</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>multirange_contains_multirange</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2405" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anymultirange|0s</LeftStoredType>
+      <ObjectId>2871</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anyrange|0s</RightStoredType>
+      <CallRoutineName>multirange_contains_range</CallRoutineName>
+      <CallRoutineIdentity>(anymultirange,anyrange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2406" parent="261" name="@&gt;">
+      <Comment>contains</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>anyrange|0s</LeftStoredType>
+      <ObjectId>4539</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>anymultirange|0s</RightStoredType>
+      <CallRoutineName>range_contains_multirange</CallRoutineName>
+      <CallRoutineIdentity>(anyrange,anymultirange)</CallRoutineIdentity>
+      <CommuteOperatorName>&lt;@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(anyarray,anyarray)</CommuteOperatorIdentity>
+      <JoinRoutineName>contjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>multirangesel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2407" parent="261" name="@?">
+      <Comment>jsonpath exists</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>4012</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>jsonpath|0s</RightStoredType>
+      <CallRoutineName>jsonb_path_exists_opr</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,jsonpath)</CallRoutineIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2408" parent="261" name="@@">
+      <Comment>center of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>513</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>point|0s</ResultStoredType>
+      <RightStoredType>box|0s</RightStoredType>
+      <CallRoutineName>box_center</CallRoutineName>
+      <CallRoutineIdentity>(box)</CallRoutineIdentity>
+    </operator>
+    <operator id="2409" parent="261" name="@@">
+      <Comment>center of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>969</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>point|0s</ResultStoredType>
+      <RightStoredType>circle|0s</RightStoredType>
+      <CallRoutineName>circle_center</CallRoutineName>
+      <CallRoutineIdentity>(circle)</CallRoutineIdentity>
+    </operator>
+    <operator id="2410" parent="261" name="@@">
+      <Comment>center of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>971</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>point|0s</ResultStoredType>
+      <RightStoredType>lseg|0s</RightStoredType>
+      <CallRoutineName>lseg_center</CallRoutineName>
+      <CallRoutineIdentity>(lseg)</CallRoutineIdentity>
+    </operator>
+    <operator id="2411" parent="261" name="@@">
+      <Comment>center of</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <ObjectId>1420</ObjectId>
+      <OperatorKind>prefix</OperatorKind>
+      <ResultStoredType>point|0s</ResultStoredType>
+      <RightStoredType>polygon|0s</RightStoredType>
+      <CallRoutineName>poly_center</CallRoutineName>
+      <CallRoutineIdentity>(polygon)</CallRoutineIdentity>
+    </operator>
+    <operator id="2412" parent="261" name="@@">
+      <Comment>text search match</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsquery|0s</LeftStoredType>
+      <ObjectId>3636</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsvector|0s</RightStoredType>
+      <CallRoutineName>ts_match_qv</CallRoutineName>
+      <CallRoutineIdentity>(tsquery,tsvector)</CallRoutineIdentity>
+      <CommuteOperatorName>@@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(tsvector,tsquery)</CommuteOperatorIdentity>
+      <JoinRoutineName>tsmatchjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>tsmatchsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2413" parent="261" name="@@">
+      <Comment>text search match</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>tsvector|0s</LeftStoredType>
+      <ObjectId>3637</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>tsquery|0s</RightStoredType>
+      <CallRoutineName>ts_match_vq</CallRoutineName>
+      <CallRoutineIdentity>(tsvector,tsquery)</CallRoutineIdentity>
+      <CommuteOperatorName>@@</CommuteOperatorName>
+      <CommuteOperatorIdentity>(tsvector,tsquery)</CommuteOperatorIdentity>
+      <JoinRoutineName>tsmatchjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>tsmatchsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2414" parent="261" name="@@">
+      <Comment>jsonpath match</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>jsonb|0s</LeftStoredType>
+      <ObjectId>3762</ObjectId>
+      <OperatorKind>binary</OperatorKind>
+      <ResultStoredType>boolean|0s</ResultStoredType>
+      <RightStoredType>jsonpath|0s</RightStoredType>
+      <CallRoutineName>jsonb_path_match_opr</CallRoutineName>
+      <CallRoutineIdentity>(jsonb,jsonpath)</CallRoutineIdentity>
+      <JoinRoutineName>matchingjoinsel</JoinRoutineName>
+      <JoinRoutineIdentity>(internal,oid,internal,smallint,internal)</JoinRoutineIdentity>
+      <RestrictRoutineName>matchingsel</RestrictRoutineName>
+      <RestrictRoutineIdentity>(internal,oid,internal,integer)</RestrictRoutineIdentity>
+    </operator>
+    <operator id="2415" parent="261" name="@@">
+      <Comment>text search match</Comment>
+      <DetailsLevel>1</DetailsLevel>
+      <LeftStoredType>text|0s</
