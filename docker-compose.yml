@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: 'postgres:15-alpine'
+    container_name: pg_restaurant_service
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - pg_data_restaurant:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - restaurant-network
+
+  mongodb:
+    image: 'mongo:7.0'
+    container_name: mongo_restaurant_audit
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
+    ports:
+      - "${MONGO_PORT}:27017"
+    volumes:
+      - mongo_data_restaurant:/data/db
+    restart: unless-stopped
+    networks:
+      - restaurant-network
+
+volumes:
+  pg_data_restaurant:
+    driver: local
+  mongo_data_restaurant:
+    driver: local
+
+networks:
+  restaurant-network:
+    driver: bridge
