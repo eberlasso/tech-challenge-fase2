@@ -1,0 +1,253 @@
+{
+  "info": {
+    "name": "Restaurant Management API",
+    "description": "Postman collection for Restaurant Management System API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"admin\", \"restaurant_owner\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "users"]
+            },
+            "description": "Create a new user with specified name, email, phone number, and roles"
+          },
+          "response": [
+            {
+              "name": "201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"admin\", \"restaurant_owner\"]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/users",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "v1", "users"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"ADMIN\", \"RESTAURANT_OWNER\"]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Restaurants",
+      "item": [
+        {
+          "name": "Create Restaurant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pizzeria Bella Italia\",\n  \"address\": \"Rua das Flores, 123, São Paulo, SP\",\n  \"cuisineType\": \"Italian\",\n  \"operatingHours\": \"11:00 - 23:00\",\n  \"ownerId\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/restaurants",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "restaurants"]
+            },
+            "description": "Create a new restaurant with owner, cuisine type, and operating hours"
+          },
+          "response": [
+            {
+              "name": "201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Pizzeria Bella Italia\",\n  \"address\": \"Rua das Flores, 123, São Paulo, SP\",\n  \"cuisineType\": \"Italian\",\n  \"operatingHours\": \"11:00 - 23:00\",\n  \"ownerId\": 1\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/restaurants",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "v1", "restaurants"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Pizzeria Bella Italia\",\n  \"address\": \"Rua das Flores, 123, São Paulo, SP\",\n  \"cuisineType\": \"Italian\",\n  \"operatingHours\": \"11:00 - 23:00\",\n  \"ownerId\": 1\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Menu Items",
+      "item": [
+        {
+          "name": "Create Menu Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Margherita Pizza\",\n  \"description\": \"Classic pizza with tomato sauce, mozzarella, and fresh basil\",\n  \"price\": 45.99,\n  \"availableOnlyInRestaurant\": false,\n  \"imagePath\": \"/images/pizzas/margherita.jpg\",\n  \"restaurantId\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "menu-items"]
+            },
+            "description": "Create a new menu item for a restaurant with price and availability settings"
+          },
+          "response": [
+            {
+              "name": "201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Margherita Pizza\",\n  \"description\": \"Classic pizza with tomato sauce, mozzarella, and fresh basil\",\n  \"price\": 45.99,\n  \"availableOnlyInRestaurant\": false,\n  \"imagePath\": \"/images/pizzas/margherita.jpg\",\n  \"restaurantId\": 1\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/menu-items",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "v1", "menu-items"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Margherita Pizza\",\n  \"description\": \"Classic pizza with tomato sauce, mozzarella, and fresh basil\",\n  \"price\": 45.99,\n  \"availableOnlyInRestaurant\": false,\n  \"imagePath\": \"/images/pizzas/margherita.jpg\",\n  \"restaurantId\": 1\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Audit Logs",
+      "item": [
+        {
+          "name": "Get All Audit Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/audit-logs",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "audit-logs"]
+            },
+            "description": "Retrieve all audit logs stored in MongoDB"
+          },
+          "response": [
+            {
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/audit-logs",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "v1", "audit-logs"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "body": "[\n  {\n    \"id\": \"507f1f77bcf86cd799439011\",\n    \"action\": \"CREATE_USER\",\n    \"details\": \"User john.doe@example.com created successfully\",\n    \"timestamp\": \"2024-01-15T10:30:00\",\n    \"performedBy\": \"SYSTEM\"\n  },\n  {\n    \"id\": \"507f1f77bcf86cd799439012\",\n    \"action\": \"CREATE_RESTAURANT\",\n    \"details\": \"Restaurant 'Pizzeria Bella Italia' created successfully\",\n    \"timestamp\": \"2024-01-15T10:35:00\",\n    \"performedBy\": \"john.doe@example.com\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Audit Logs by Action",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/audit-logs?action=CREATE_USER",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "audit-logs"],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "CREATE_USER"
+                }
+              ]
+            },
+            "description": "Retrieve audit logs filtered by a specific action type"
+          },
+          "response": [
+            {
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/audit-logs?action=CREATE_USER",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "v1", "audit-logs"],
+                  "query": [
+                    {
+                      "key": "action",
+                      "value": "CREATE_USER"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "body": "[\n  {\n    \"id\": \"507f1f77bcf86cd799439011\",\n    \"action\": \"CREATE_USER\",\n    \"details\": \"User john.doe@example.com created successfully\",\n    \"timestamp\": \"2024-01-15T10:30:00\",\n    \"performedBy\": \"SYSTEM\"\n  }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
+
