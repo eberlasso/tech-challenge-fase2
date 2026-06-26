@@ -41,4 +41,13 @@ public interface RestaurantGateway {
      * @return A list of matching restaurant records.
      */
     List<Restaurant> findByCuisineType(String cuisineType);
+
+    /**
+     * Checks if a restaurant already exists with the same business identity.
+     *
+     * @param name The restaurant commercial name.
+     * @param address The restaurant physical address.
+     * @return true when another record with the same name/address already exists.
+     */
+    boolean existsByNameAndAddress(String name, String address);
 }

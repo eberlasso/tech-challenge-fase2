@@ -14,4 +14,6 @@ public interface SpringDataRestaurantRepository extends JpaRepository<Restaurant
 
     // O Spring Data vai gerar automaticamente o SQL: SELECT * FROM tb_restaurants WHERE cuisine_type = ?
     List<RestaurantEntity> findByCuisineType(String cuisineType);
+
+    boolean existsByNameIgnoreCaseAndAddressIgnoreCase(String name, String address);
 }

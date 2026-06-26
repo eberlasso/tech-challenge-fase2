@@ -1,6 +1,8 @@
 package com.postech.restaurantmanagement.domain.usecase;
 
 import com.postech.restaurantmanagement.domain.entity.Restaurant;
+import com.postech.restaurantmanagement.domain.exception.EntityValidationException;
+import com.postech.restaurantmanagement.domain.exception.ResourceAlreadyExistsException;
 import com.postech.restaurantmanagement.domain.gateway.AuditLogGateway;
 import com.postech.restaurantmanagement.domain.gateway.RestaurantGateway;
 
@@ -19,6 +21,14 @@ public class CreateRestaurantUseCase {
     }
 
     public Restaurant execute(Restaurant restaurant) {
+        if (restaurant == null || !restaurant.isValid()) {
+            throw new EntityValidationException("Invalid restaurant data. Verify required fields and owner reference.");
+        }
+
+        if (restaurantGateway.existsByNameAndAddress(restaurant.getName(), restaurant.getAddress())) {
+            throw new ResourceAlreadyExistsException("A restaurant with the same name and address already exists.");
+        }
+
         // 1. Executa a persistência operacional no PostgreSQL
         Restaurant savedRestaurant = restaurantGateway.save(restaurant);
 
