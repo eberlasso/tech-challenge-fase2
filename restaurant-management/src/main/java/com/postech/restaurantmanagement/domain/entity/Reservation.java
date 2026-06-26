@@ -27,16 +27,9 @@ public class Reservation {
 
     // --- CORE BUSINESS RULES ---
 
-    /**
-     * Validates if the reservation business invariants are fully satisfied.
-     * A reservation requires a valid client with CLIENT role, a non-null restaurant,
-     * a positive number of people, and a future date and time schedule.
-     *
-     * @return true if all core business rules are valid, false otherwise.
-     */
     public boolean isValid() {
-        return client != null && client.isValid() && client.hasRole(UserRole.CLIENT) &&
-               restaurant != null &&
+        return client != null && client.getId() != null &&
+               restaurant != null && restaurant.getId() != null &&
                numberOfPeople > 0 &&
                reservationDateTime != null && reservationDateTime.isAfter(LocalDateTime.now());
     }

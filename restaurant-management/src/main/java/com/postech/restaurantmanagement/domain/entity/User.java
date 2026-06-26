@@ -14,6 +14,7 @@ public class User {
     private final Long id;
     private final String name;
     private final String email;
+    private final String password;
     private final String phoneNumber;
     private final Set<UserRole> roles;
 
@@ -24,6 +25,7 @@ public class User {
         this.id = builder.id;
         this.name = builder.name;
         this.email = builder.email;
+        this.password = builder.password;
         this.phoneNumber = builder.phoneNumber;
         this.roles = builder.roles != null ? Collections.unmodifiableSet(new HashSet<>(builder.roles)) : Collections.emptySet();
     }
@@ -45,6 +47,7 @@ public class User {
     public Long getId() { return id; }
     public String getName() { return name; }
     public String getEmail() { return email; }
+    public String getPassword() { return password; }
     public String getPhoneNumber() { return phoneNumber; }
     public Set<UserRole> getRoles() { return roles; }
 
@@ -58,6 +61,7 @@ public class User {
         private Long id;
         private String name;
         private String email;
+        private String password;
         private String phoneNumber;
         private Set<UserRole> roles = new HashSet<>();
 
@@ -73,6 +77,11 @@ public class User {
 
         public Builder email(String email) {
             this.email = email;
+            return this;
+        }
+
+        public Builder password(String password) {
+            this.password = password;
             return this;
         }
 

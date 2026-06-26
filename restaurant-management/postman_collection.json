@@ -18,9 +18,9 @@
                 "value": "application/json"
               }
             ],
-            "body": {
+              "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"admin\", \"restaurant_owner\"]\n}"
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/api/v1/users",
@@ -42,7 +42,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"admin\", \"restaurant_owner\"]\n}"
+                  "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/users",
@@ -52,7 +52,7 @@
               },
               "status": "Created",
               "code": 201,
-              "body": "{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"ADMIN\", \"RESTAURANT_OWNER\"]\n}"
+              "body": "{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
             }
           ]
         }
