@@ -1,7 +1,6 @@
 package com.postech.restaurantmanagement.domain.usecase;
 
 import com.postech.restaurantmanagement.domain.entity.MenuItem;
-import com.postech.restaurantmanagement.domain.entity.Restaurant;
 import com.postech.restaurantmanagement.domain.exception.EntityValidationException;
 import com.postech.restaurantmanagement.domain.exception.ResourceAlreadyExistsException;
 import com.postech.restaurantmanagement.domain.gateway.MenuItemGateway;

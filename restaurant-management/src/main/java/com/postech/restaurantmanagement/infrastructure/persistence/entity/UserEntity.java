@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Structural JPA Entity mapping the corporate user registry to the PostgreSQL database.
