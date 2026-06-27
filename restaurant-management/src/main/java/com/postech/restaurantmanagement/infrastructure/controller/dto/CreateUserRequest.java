@@ -8,6 +8,7 @@ import java.util.Set;
 public record CreateUserRequest(
     String name,
     String email,
+    String password,
     String phoneNumber,
     Set<String> roles
 ) {}

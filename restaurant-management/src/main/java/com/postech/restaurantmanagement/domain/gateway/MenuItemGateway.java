@@ -16,4 +16,13 @@ public interface MenuItemGateway {
     Optional<MenuItem> findById(Long id);
 
     List<List<MenuItem>> findByRestaurantId(Long restaurantId);
+
+    /**
+     * Checks if a menu item with the same name already exists in a specific restaurant.
+     *
+     * @param name         The menu item name to check (case-insensitive).
+     * @param restaurantId The restaurant identifier.
+     * @return true if another menu item with the same name exists in this restaurant.
+     */
+    boolean existsByNameAndRestaurant(String name, Long restaurantId);
 }

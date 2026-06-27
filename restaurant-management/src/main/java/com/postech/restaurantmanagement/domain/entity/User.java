@@ -27,7 +27,7 @@ public class User {
         this.email = builder.email;
         this.password = builder.password;
         this.phoneNumber = builder.phoneNumber;
-        this.roles = builder.roles != null ? Collections.unmodifiableSet(new HashSet<>(builder.roles)) : Collections.emptySet();
+        this.roles = builder.roles != null ? Set.copyOf(builder.roles) : Collections.emptySet();
     }
 
     // --- BUSINESS RULES ---
@@ -35,6 +35,7 @@ public class User {
     public boolean isValid() {
         return name != null && !name.isBlank() &&
                email != null && !email.isBlank() && EMAIL_PATTERN.matcher(email).matches() &&
+               password != null && !password.isBlank() &&
                roles != null && !roles.isEmpty();
     }
 

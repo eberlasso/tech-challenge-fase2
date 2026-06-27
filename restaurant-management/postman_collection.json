@@ -20,14 +20,14 @@
             ],
               "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"StrongPass@123\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/api/v1/users",
               "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "users"]
             },
-            "description": "Create a new user with specified name, email, phone number, and roles"
+            "description": "Create a new user with specified name, email, password, phone number, and roles"
           },
           "response": [
             {
@@ -42,7 +42,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
+                  "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"StrongPass@123\",\n  \"phoneNumber\": \"+55 11 98765-4321\",\n  \"roles\": [\"RESTAURANT_OWNER\"]\n}"
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/users",
@@ -245,7 +245,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:8080",
+      "value": "http://localhost:8080/restaurant",
       "type": "string"
     }
   ]

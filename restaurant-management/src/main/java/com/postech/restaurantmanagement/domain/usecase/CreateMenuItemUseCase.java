@@ -3,6 +3,7 @@ package com.postech.restaurantmanagement.domain.usecase;
 import com.postech.restaurantmanagement.domain.entity.MenuItem;
 import com.postech.restaurantmanagement.domain.entity.Restaurant;
 import com.postech.restaurantmanagement.domain.exception.EntityValidationException;
+import com.postech.restaurantmanagement.domain.exception.ResourceAlreadyExistsException;
 import com.postech.restaurantmanagement.domain.gateway.MenuItemGateway;
 import com.postech.restaurantmanagement.domain.gateway.RestaurantGateway;
 
@@ -40,8 +41,13 @@ public class CreateMenuItemUseCase {
         }
 
         // 2. Guarantees the restaurant exists before allowing item association
-        Restaurant existingRestaurant = restaurantGateway.findById(newMenuItem.getRestaurant().getId())
+        restaurantGateway.findById(newMenuItem.getRestaurant().getId())
                 .orElseThrow(() -> new EntityValidationException("The targeted restaurant for this menu item does not exist."));
+
+        // 3. Enforces business rule: Menu item name must be unique within a restaurant
+        if (menuItemGateway.existsByNameAndRestaurant(newMenuItem.getName(), newMenuItem.getRestaurant().getId())) {
+            throw new ResourceAlreadyExistsException("A menu item with the name '" + newMenuItem.getName() + "' already exists in this restaurant.");
+        }
 
         // 3. Persists the structural business item through the gateway boundary
         return menuItemGateway.save(newMenuItem);

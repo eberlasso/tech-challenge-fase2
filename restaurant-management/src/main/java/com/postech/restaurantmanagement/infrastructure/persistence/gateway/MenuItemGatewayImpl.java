@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * Infrastructure implementation acting as the boundary Gateway adapter for Menu Item relational data.
@@ -45,5 +44,10 @@ public class MenuItemGatewayImpl implements MenuItemGateway {
                 .toList();
 
         return List.of(items); // Envelopa a lista dentro de outra lista
+    }
+
+    @Override
+    public boolean existsByNameAndRestaurant(String name, Long restaurantId) {
+        return repository.existsByNameIgnoreCaseAndRestaurantId(name, restaurantId);
     }
 }

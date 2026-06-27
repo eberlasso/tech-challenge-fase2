@@ -25,6 +25,7 @@ public interface UserMapper {
         return User.builder()
                 .name(req.name())
                 .email(req.email())
+                .password(req.password())
                 .phoneNumber(req.phoneNumber())
                 .roles(roles)
                 .build();
