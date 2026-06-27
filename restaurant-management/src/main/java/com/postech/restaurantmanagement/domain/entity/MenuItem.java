@@ -31,7 +31,8 @@ public class MenuItem {
     /**
      * Validates if the menu item enterprise invariants are fully satisfied.
      * Requires valid descriptive metadata, a strictly positive non-null price,
-     * an image tracking reference path, and an associated valid restaurant.
+     * an image tracking reference path, and an associated restaurant reference.
+     * Note: Restaurant validation (existence, completeness) is handled by the use case layer.
      *
      * @return true if all corporate business rules are valid, false otherwise.
      */
@@ -40,7 +41,7 @@ public class MenuItem {
                description != null && !description.isBlank() &&
                price != null && price.compareTo(BigDecimal.ZERO) > 0 &&
                imagePath != null && !imagePath.isBlank() &&
-               restaurant != null && restaurant.isValid();
+               restaurant != null && restaurant.getId() != null;
     }
 
     // --- PURE GETTERS ---

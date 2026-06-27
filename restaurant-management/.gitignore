@@ -14,10 +14,12 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
+.idea/
 .idea
 *.iws
 *.iml
 *.ipr
+*.xml
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +33,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+*.meta
+
+# Local export files (do not commit; hide from VCS/IDE unversioned list)
+postman_collection.json
+*.postman_collection.json
+

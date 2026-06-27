@@ -4,8 +4,8 @@ import com.postech.restaurantmanagement.infrastructure.controller.api.Restaurant
 import com.postech.restaurantmanagement.infrastructure.controller.dto.CreateRestaurantRequest;
 import com.postech.restaurantmanagement.infrastructure.controller.dto.RestaurantResponse;
 import com.postech.restaurantmanagement.domain.entity.Restaurant;
-import com.postech.restaurantmanagement.domain.entity.User;
 import com.postech.restaurantmanagement.domain.usecase.CreateRestaurantUseCase;
+import com.postech.restaurantmanagement.infrastructure.controller.mapper.RestaurantMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,37 +18,22 @@ import org.springframework.web.bind.annotation.*;
 public class RestaurantController implements RestaurantApi {
 
     private final CreateRestaurantUseCase createRestaurantUseCase;
+    private final RestaurantMapper restaurantMapper;
 
-    public RestaurantController(CreateRestaurantUseCase createRestaurantUseCase) {
+    public RestaurantController(CreateRestaurantUseCase createRestaurantUseCase, RestaurantMapper restaurantMapper) {
         this.createRestaurantUseCase = createRestaurantUseCase;
+        this.restaurantMapper = restaurantMapper;
     }
 
     @Override
     @PostMapping
     public ResponseEntity<RestaurantResponse> createRestaurant(@RequestBody CreateRestaurantRequest request) {
 
-        User ownerProxy = User.builder()
-                .id(request.ownerId())
-                .build();
-
-        Restaurant restaurantDomainInput = Restaurant.builder()
-                .name(request.name())
-                .address(request.address())
-                .cuisineType(request.cuisineType())
-                .operatingHours(request.operatingHours())
-                .owner(ownerProxy)
-                .build();
+        Restaurant restaurantDomainInput = restaurantMapper.toDomain(request);
 
         Restaurant createdRestaurant = createRestaurantUseCase.execute(restaurantDomainInput);
 
-        RestaurantResponse responseBody = new RestaurantResponse(
-                createdRestaurant.getId(),
-                createdRestaurant.getName(),
-                createdRestaurant.getAddress(),
-                createdRestaurant.getCuisineType(),
-                createdRestaurant.getOperatingHours(),
-                createdRestaurant.getOwner().getId()
-        );
+        RestaurantResponse responseBody = restaurantMapper.toResponse(createdRestaurant);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(responseBody);
     }

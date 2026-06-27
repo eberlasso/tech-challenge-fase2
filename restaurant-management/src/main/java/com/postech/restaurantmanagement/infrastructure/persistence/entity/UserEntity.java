@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Structural JPA Entity mapping the corporate user registry to the PostgreSQL database.
@@ -29,11 +27,12 @@ public class UserEntity {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @Column(name = "phone_number", nullable = false, length = 20)
+    @Column(nullable = false, length = 255)
+    private String password;
+
+    @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "tb_user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role_name", nullable = false)
-    private Set<String> roles = new HashSet<>();
+    @Column(name = "user_type_id", nullable = false)
+    private Long userTypeId;
 }

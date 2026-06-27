@@ -26,19 +26,12 @@ public class Restaurant {
 
     // --- CORE BUSINESS RULES ---
 
-    /**
-     * Validates if the restaurant enterprise invariants are fully satisfied.
-     * Replicating strict requirements: non-blank identity metadata, structural
-     * location properties, and an assigned, valid administrative owner.
-     *
-     * @return true if all corporate business rules are valid, false otherwise.
-     */
     public boolean isValid() {
         return name != null && !name.isBlank() &&
                address != null && !address.isBlank() &&
                cuisineType != null && !cuisineType.isBlank() &&
                operatingHours != null && !operatingHours.isBlank() &&
-               owner != null && owner.isValid() && owner.hasRole(UserRole.RESTAURANT_OWNER);
+               owner != null && owner.getId() != null;
     }
 
     // --- PURE GETTERS ---

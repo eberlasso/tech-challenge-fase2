@@ -52,4 +52,9 @@ public class RestaurantGatewayImpl implements RestaurantGateway {
                 .map(restaurantMapper::toDomain)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public boolean existsByNameAndAddress(String name, String address) {
+        return repository.existsByNameIgnoreCaseAndAddressIgnoreCase(name, address);
+    }
 }

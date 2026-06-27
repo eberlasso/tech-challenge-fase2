@@ -5,8 +5,8 @@ import com.postech.restaurantmanagement.infrastructure.controller.api.MenuItemAp
 import com.postech.restaurantmanagement.infrastructure.controller.dto.CreateMenuItemRequest;
 import com.postech.restaurantmanagement.infrastructure.controller.dto.MenuItemResponse;
 import com.postech.restaurantmanagement.domain.entity.MenuItem;
-import com.postech.restaurantmanagement.domain.entity.Restaurant;
 import com.postech.restaurantmanagement.domain.usecase.CreateMenuItemUseCase;
+import com.postech.restaurantmanagement.infrastructure.controller.mapper.MenuItemMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,39 +19,22 @@ import org.springframework.web.bind.annotation.*;
 public class MenuItemController implements MenuItemApi {
 
     private final CreateMenuItemUseCase createMenuItemUseCase;
+    private final MenuItemMapper menuItemMapper;
 
-    public MenuItemController(CreateMenuItemUseCase createMenuItemUseCase) {
+    public MenuItemController(CreateMenuItemUseCase createMenuItemUseCase, MenuItemMapper menuItemMapper) {
         this.createMenuItemUseCase = createMenuItemUseCase;
+        this.menuItemMapper = menuItemMapper;
     }
 
     @Override
     @PostMapping
     public ResponseEntity<MenuItemResponse> createMenuItem(@RequestBody CreateMenuItemRequest request) {
 
-        Restaurant restaurantProxy = Restaurant.builder()
-                .id(request.restaurantId())
-                .build();
-
-        MenuItem menuItemDomainInput = MenuItem.builder()
-                .name(request.name())
-                .description(request.description())
-                .price(request.price())
-                .availableOnlyInRestaurant(request.availableOnlyInRestaurant())
-                .imagePath(request.imagePath())
-                .restaurant(restaurantProxy)
-                .build();
+        MenuItem menuItemDomainInput = menuItemMapper.toDomain(request);
 
         MenuItem createdItem = createMenuItemUseCase.execute(menuItemDomainInput);
 
-        MenuItemResponse responseBody = new MenuItemResponse(
-                createdItem.getId(),
-                createdItem.getName(),
-                createdItem.getDescription(),
-                createdItem.getPrice(),
-                createdItem.isAvailableOnlyInRestaurant(),
-                createdItem.getImagePath(),
-                createdItem.getRestaurant().getId()
-        );
+        MenuItemResponse responseBody = menuItemMapper.toResponse(createdItem);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(responseBody);
     }

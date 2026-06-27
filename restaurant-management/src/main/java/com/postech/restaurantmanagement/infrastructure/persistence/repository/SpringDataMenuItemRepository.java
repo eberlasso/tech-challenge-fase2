@@ -13,4 +13,6 @@ import java.util.List;
 public interface SpringDataMenuItemRepository extends JpaRepository<MenuItemEntity, Long> {
     // O Spring Data vai gerar automaticamente o SQL filtrando pela FK do restaurante
     List<MenuItemEntity> findByRestaurantId(Long restaurantId);
+
+    boolean existsByNameIgnoreCaseAndRestaurantId(String name, Long restaurantId);
 }
