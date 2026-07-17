@@ -16,25 +16,56 @@ https://github.com/eberlasso/tech-challenge-fase2.git
 
 > Pré-requisito: ter **Docker** e **Docker Compose** instalados.
 
+### Passo 1 — Clone o repositório
+
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/eberlasso/tech-challenge-fase2.git
 cd tech-challenge-fase2
+```
 
-# 2. Suba todos os containers (aplicação + PostgreSQL + MongoDB)
+### Passo 2 — Suba os containers com build completo (testes + cobertura)
+
+> ⚠️ Este comando executa **todos os testes unitários e de integração** e verifica a **cobertura JaCoCo** antes de iniciar a aplicação. Aguarde a conclusão (~3 minutos).
+
+```bash
+docker compose up --build
+```
+
+Você verá no terminal a saída completa do build Maven com os testes sendo executados. Aguarde até aparecer:
+
+```
+restaurant_management_app  | Started RestaurantManagementApplication
+```
+
+### Passo 3 — (Opcional) Rodar em background
+
+Se preferir liberar o terminal após o build, use:
+
+```bash
+# Sobe em background
 docker compose up -d --build
 
-# 3. Acompanhe os logs até a aplicação estar pronta
+# Acompanhe os logs em outro terminal
 docker compose logs -f restaurant-app
 ```
 
-Quando aparecer `Started RestaurantManagementApplication`, acesse:
+Pressione `Ctrl+C` para sair dos logs (a aplicação continua rodando).
+
+### Passo 4 — Acesse a aplicação
+
+Quando a aplicação estiver pronta, acesse:
 
 | Recurso | URL |
 |---------|-----|
 | 🌐 API Base | `http://localhost:8080/restaurant/api/v1` |
 | 📖 Swagger UI | `http://localhost:8080/restaurant/swagger-ui/index.html` |
 | 📋 OpenAPI JSON | `http://localhost:8080/restaurant/v3/api-docs` |
+
+### Passo 5 — Parar o ambiente
+
+```bash
+docker compose down
+```
 
 > O arquivo `.env` já está configurado com valores padrão — **não é necessário nenhuma configuração adicional** para rodar.
 
@@ -458,23 +489,28 @@ Registra automaticamente cada operação de criação via `AuditLogGatewayImpl`.
 | `MONGO_PORT` | `27017` | Porta do MongoDB |
 | `MONGO_DB_NAME` | `db_restaurant_audits` | Nome do banco MongoDB |
 
-### 🐳 Executar com Docker (recomendado)
+### 🐳 Executar com Docker
+
+**Opção A — Ver tudo no terminal (recomendado para avaliadores)**
 
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/eberlasso/tech-challenge-fase2.git
-cd tech-challenge-fase2
+# Sobe com log completo do build + testes + aplicação visíveis
+docker compose up --build
+```
 
-# 2. Edite o .env e defina uma senha segura para DB_PASSWORD
-# (o arquivo .env já está na raiz com valores padrão)
+Aguarde aparecer `Started RestaurantManagementApplication` e acesse as URLs.
+Pressione `Ctrl+C` para encerrar.
 
-# 3. Suba os containers
+**Opção B — Rodar em background**
+
+```bash
+# Sobe em background
 docker compose up -d --build
 
-# 4. Acompanhe os logs da aplicação
+# Em seguida acompanhe os logs da aplicação
 docker compose logs -f restaurant-app
 
-# 5. Para parar
+# Para parar
 docker compose down
 ```
 
