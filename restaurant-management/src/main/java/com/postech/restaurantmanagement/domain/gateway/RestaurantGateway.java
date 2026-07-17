@@ -50,4 +50,8 @@ public interface RestaurantGateway {
      * @return true when another record with the same name/address already exists.
      */
     boolean existsByNameAndAddress(String name, String address);
+
+    boolean existsByNameAndAddressAndIdNot(String name, String address, Long id);
+
+    void deleteById(Long id);
 }

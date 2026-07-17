@@ -13,4 +13,6 @@ import java.util.Optional;
 public interface SpringDataUserRepository extends JpaRepository<UserEntity, Long> {
 
     Optional<UserEntity> findByEmail(String email);
+
+    boolean existsByEmailIgnoreCaseAndIdNot(String email, Long id);
 }

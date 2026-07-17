@@ -38,16 +38,31 @@ public class MenuItemGatewayImpl implements MenuItemGateway {
     }
 
     @Override
-    public List<List<MenuItem>> findByRestaurantId(Long restaurantId) {
-        List<MenuItem> items = repository.findByRestaurantId(restaurantId).stream()
+    public List<MenuItem> findAll() {
+        return repository.findAll().stream()
                 .map(menuItemMapper::toDomain)
                 .toList();
+    }
 
-        return List.of(items); // Envelopa a lista dentro de outra lista
+    @Override
+    public List<MenuItem> findByRestaurantId(Long restaurantId) {
+        return repository.findByRestaurantId(restaurantId).stream()
+                .map(menuItemMapper::toDomain)
+                .toList();
     }
 
     @Override
     public boolean existsByNameAndRestaurant(String name, Long restaurantId) {
         return repository.existsByNameIgnoreCaseAndRestaurantId(name, restaurantId);
+    }
+
+    @Override
+    public boolean existsByNameAndRestaurantAndIdNot(String name, Long restaurantId, Long id) {
+        return repository.existsByNameIgnoreCaseAndRestaurantIdAndIdNot(name, restaurantId, id);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
 }

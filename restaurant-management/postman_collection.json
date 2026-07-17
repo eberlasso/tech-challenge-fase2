@@ -24,8 +24,14 @@
             },
             "url": {
               "raw": "{{baseUrl}}/api/v1/users",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "v1", "users"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
             },
             "description": "Create a new user with specified name, email, password, phone number, and roles"
           },
@@ -46,8 +52,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/users",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "users"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users"
+                  ]
                 }
               },
               "status": "Created",
@@ -70,8 +82,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/users",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "users"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users"
+                  ]
                 }
               },
               "status": "Bad Request",
@@ -94,8 +112,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/users",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "users"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users"
+                  ]
                 }
               },
               "status": "Conflict",
@@ -103,6 +127,94 @@
               "body": "{\n  \"status\": 409,\n  \"error\": \"Conflict\",\n  \"message\": \"Email address already registered: john.doe@example.com\",\n  \"timestamp\": \"2024-01-15T10:30:00\",\n  \"path\": \"/api/v1/users\"\n}"
             }
           ]
+        },
+        {
+          "name": "List Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"João Silva Atualizado\",\n  \"email\": \"joao@email.com\",\n  \"password\": \"StrongPass@123\",\n  \"phoneNumber\": \"+55 11 99999-8888\",\n  \"roles\": [\n    \"RESTAURANT_OWNER\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -125,8 +237,14 @@
             },
             "url": {
               "raw": "{{baseUrl}}/api/v1/restaurants",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "v1", "restaurants"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "restaurants"
+              ]
             },
             "description": "Create a new restaurant with owner, cuisine type, and operating hours"
           },
@@ -147,8 +265,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/restaurants",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "restaurants"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "restaurants"
+                  ]
                 }
               },
               "status": "Created",
@@ -171,8 +295,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/restaurants",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "restaurants"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "restaurants"
+                  ]
                 }
               },
               "status": "Bad Request",
@@ -180,6 +310,94 @@
               "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid restaurant data: name must not be blank or owner not found\",\n  \"timestamp\": \"2024-01-15T10:35:00\",\n  \"path\": \"/api/v1/restaurants\"\n}"
             }
           ]
+        },
+        {
+          "name": "List Restaurants",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/restaurants",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "restaurants"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Restaurant By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/restaurants/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Restaurant",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/restaurants/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pizzeria Bella Italia Atualizada\",\n  \"address\": \"Rua das Flores, 123, São Paulo, SP\",\n  \"cuisineType\": \"Italiana\",\n  \"operatingHours\": \"12:00 - 23:00\",\n  \"ownerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Restaurant",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/restaurants/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -202,8 +420,14 @@
             },
             "url": {
               "raw": "{{baseUrl}}/api/v1/menu-items",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "v1", "menu-items"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items"
+              ]
             },
             "description": "Create a new menu item for a restaurant with price and availability settings"
           },
@@ -224,8 +448,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/menu-items",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "menu-items"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "menu-items"
+                  ]
                 }
               },
               "status": "Created",
@@ -248,8 +478,14 @@
                 },
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/menu-items",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "menu-items"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "menu-items"
+                  ]
                 }
               },
               "status": "Bad Request",
@@ -257,6 +493,119 @@
               "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid menu item data: price must be greater than zero or restaurant not found\",\n  \"timestamp\": \"2024-01-15T10:40:00\",\n  \"path\": \"/api/v1/menu-items\"\n}"
             }
           ]
+        },
+        {
+          "name": "List Menu Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Menu Items By Restaurant",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items?restaurantId=1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items"
+              ],
+              "query": [
+                {
+                  "key": "restaurantId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Menu Item By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Menu Item",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pizza Margherita Atualizada\",\n  \"description\": \"Pizza com molho de tomate, mozzarella e manjericão fresco\",\n  \"price\": 49.99,\n  \"availableOnlyInRestaurant\": false,\n  \"imagePath\": \"/images/pizzas/margherita.jpg\",\n  \"restaurantId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Menu Item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/menu-items/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "menu-items",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -270,8 +619,14 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/api/v1/audit-logs",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "v1", "audit-logs"]
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "audit-logs"
+              ]
             },
             "description": "Retrieve all audit logs stored in MongoDB"
           },
@@ -283,8 +638,14 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/audit-logs",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "audit-logs"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "audit-logs"
+                  ]
                 }
               },
               "status": "OK",
@@ -298,8 +659,14 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/audit-logs",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "audit-logs"]
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "audit-logs"
+                  ]
                 }
               },
               "status": "OK",
@@ -315,8 +682,14 @@
             "header": [],
             "url": {
               "raw": "{{baseUrl}}/api/v1/audit-logs?action=CREATE_USER",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "v1", "audit-logs"],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "audit-logs"
+              ],
               "query": [
                 {
                   "key": "action",
@@ -334,8 +707,14 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/audit-logs?action=CREATE_USER",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "audit-logs"],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "audit-logs"
+                  ],
                   "query": [
                     {
                       "key": "action",
@@ -355,8 +734,14 @@
                 "header": [],
                 "url": {
                   "raw": "{{baseUrl}}/api/v1/audit-logs?action=UNKNOWN_ACTION",
-                  "host": ["{{baseUrl}}"],
-                  "path": ["api", "v1", "audit-logs"],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "audit-logs"
+                  ],
                   "query": [
                     {
                       "key": "action",

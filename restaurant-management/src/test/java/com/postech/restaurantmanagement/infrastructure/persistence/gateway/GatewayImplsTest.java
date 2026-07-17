@@ -49,10 +49,16 @@ class GatewayImplsTest {
         when(userMapper.toDomain(entity)).thenReturn(domain);
         when(userRepository.findByEmail("a@a.com")).thenReturn(Optional.of(entity));
         when(userRepository.findById(1L)).thenReturn(Optional.of(entity));
+        when(userRepository.findAll()).thenReturn(List.of(entity));
+        when(userRepository.existsByEmailIgnoreCaseAndIdNot("a@a.com", 1L)).thenReturn(true);
 
         assertEquals(domain, userGateway.save(domain));
         assertTrue(userGateway.findByEmail("a@a.com").isPresent());
         assertTrue(userGateway.findById(1L).isPresent());
+        assertEquals(1, userGateway.findAll().size());
+        assertTrue(userGateway.existsByEmailAndIdNot("a@a.com", 1L));
+        userGateway.deleteById(1L);
+        verify(userRepository).deleteById(1L);
     }
 
     @Test
@@ -67,12 +73,16 @@ class GatewayImplsTest {
         when(restaurantRepository.findAll()).thenReturn(List.of(entity));
         when(restaurantRepository.findByCuisineType("Italian")).thenReturn(List.of(entity));
         when(restaurantRepository.existsByNameIgnoreCaseAndAddressIgnoreCase("A", "B")).thenReturn(true);
+        when(restaurantRepository.existsByNameIgnoreCaseAndAddressIgnoreCaseAndIdNot("A", "B", 1L)).thenReturn(true);
 
         assertEquals(domain, restaurantGateway.save(domain));
         assertEquals(1, restaurantGateway.findAll().size());
         assertEquals(1, restaurantGateway.findByCuisineType("Italian").size());
         assertTrue(restaurantGateway.findById(1L).isPresent());
         assertTrue(restaurantGateway.existsByNameAndAddress("A", "B"));
+        assertTrue(restaurantGateway.existsByNameAndAddressAndIdNot("A", "B", 1L));
+        restaurantGateway.deleteById(1L);
+        verify(restaurantRepository).deleteById(1L);
     }
 
     @Test
@@ -84,14 +94,18 @@ class GatewayImplsTest {
         when(menuItemRepository.save(entity)).thenReturn(entity);
         when(menuItemMapper.toDomain(entity)).thenReturn(domain);
         when(menuItemRepository.findById(5L)).thenReturn(Optional.of(entity));
+        when(menuItemRepository.findAll()).thenReturn(List.of(entity));
         when(menuItemRepository.findByRestaurantId(2L)).thenReturn(List.of(entity));
         when(menuItemRepository.existsByNameIgnoreCaseAndRestaurantId("Pizza", 2L)).thenReturn(true);
+        when(menuItemRepository.existsByNameIgnoreCaseAndRestaurantIdAndIdNot("Pizza", 2L, 5L)).thenReturn(true);
 
         assertEquals(domain, menuItemGateway.save(domain));
         assertTrue(menuItemGateway.findById(5L).isPresent());
+        assertEquals(1, menuItemGateway.findAll().size());
         assertEquals(1, menuItemGateway.findByRestaurantId(2L).size());
-        assertEquals(1, menuItemGateway.findByRestaurantId(2L).get(0).size());
         assertTrue(menuItemGateway.existsByNameAndRestaurant("Pizza", 2L));
+        assertTrue(menuItemGateway.existsByNameAndRestaurantAndIdNot("Pizza", 2L, 5L));
+        menuItemGateway.deleteById(5L);
+        verify(menuItemRepository).deleteById(5L);
     }
 }
-

@@ -8,7 +8,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 /**
  * OpenAPI documentation contract for Restaurant management operations.
@@ -33,4 +36,16 @@ public interface RestaurantApi {
         }
     )
     ResponseEntity<RestaurantResponse> createRestaurant(@RequestBody CreateRestaurantRequest request);
+
+    @Operation(summary = "List restaurants", description = "Returns all restaurants.")
+    ResponseEntity<List<RestaurantResponse>> listRestaurants();
+
+    @Operation(summary = "Get restaurant by ID", description = "Returns one restaurant by identifier.")
+    ResponseEntity<RestaurantResponse> getRestaurantById(@PathVariable Long id);
+
+    @Operation(summary = "Update restaurant", description = "Updates an existing restaurant.")
+    ResponseEntity<RestaurantResponse> updateRestaurant(@PathVariable Long id, @RequestBody CreateRestaurantRequest request);
+
+    @Operation(summary = "Delete restaurant", description = "Removes a restaurant by identifier.")
+    ResponseEntity<Void> deleteRestaurant(@PathVariable Long id);
 }

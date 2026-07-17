@@ -1,6 +1,7 @@
 package com.postech.restaurantmanagement.infrastructure.controller.api;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.postech.restaurantmanagement.infrastructure.controller.dto.CreateUserRequest;
@@ -11,6 +12,8 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+
+import java.util.List;
 
 /**
  * OpenAPI documentation contract for User management operations.
@@ -39,4 +42,16 @@ public interface UserApi {
         }
     )
     ResponseEntity<UserResponse> createUser(@RequestBody CreateUserRequest request);
+
+    @Operation(summary = "List users", description = "Returns all users registered in the system.")
+    ResponseEntity<List<UserResponse>> listUsers();
+
+    @Operation(summary = "Get user by ID", description = "Returns one user by identifier.")
+    ResponseEntity<UserResponse> getUserById(@PathVariable Long id);
+
+    @Operation(summary = "Update user", description = "Updates an existing user.")
+    ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody CreateUserRequest request);
+
+    @Operation(summary = "Delete user", description = "Removes a user by identifier.")
+    ResponseEntity<Void> deleteUser(@PathVariable Long id);
 }
