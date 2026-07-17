@@ -20,5 +20,11 @@ class ExceptionsTest {
         assertEquals("exists", ex.getMessage());
         assertTrue(ex instanceof BusinessException);
     }
-}
 
+    @Test
+    void shouldCreateResourceNotFoundException() {
+        ResourceNotFoundException ex = new ResourceNotFoundException("not found");
+        assertEquals("not found", ex.getMessage());
+        assertTrue(ex instanceof BusinessException);
+    }
+}

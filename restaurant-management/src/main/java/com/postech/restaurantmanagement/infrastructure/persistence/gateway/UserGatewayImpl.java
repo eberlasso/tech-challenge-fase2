@@ -7,6 +7,7 @@ import com.postech.restaurantmanagement.infrastructure.persistence.mapper.UserEn
 import com.postech.restaurantmanagement.infrastructure.persistence.repository.SpringDataUserRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -37,5 +38,22 @@ public class UserGatewayImpl implements UserGateway {
     public Optional<User> findById(Long id) {
         return repository.findById(id)
                 .map(userMapper::toDomain);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return repository.findAll().stream()
+                .map(userMapper::toDomain)
+                .toList();
+    }
+
+    @Override
+    public boolean existsByEmailAndIdNot(String email, Long id) {
+        return repository.existsByEmailIgnoreCaseAndIdNot(email, id);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
 }

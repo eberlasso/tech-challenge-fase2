@@ -57,4 +57,14 @@ public class RestaurantGatewayImpl implements RestaurantGateway {
     public boolean existsByNameAndAddress(String name, String address) {
         return repository.existsByNameIgnoreCaseAndAddressIgnoreCase(name, address);
     }
+
+    @Override
+    public boolean existsByNameAndAddressAndIdNot(String name, String address, Long id) {
+        return repository.existsByNameIgnoreCaseAndAddressIgnoreCaseAndIdNot(name, address, id);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 }

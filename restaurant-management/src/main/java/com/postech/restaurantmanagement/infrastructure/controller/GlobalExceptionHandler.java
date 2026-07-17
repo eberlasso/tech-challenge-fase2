@@ -3,6 +3,7 @@ package com.postech.restaurantmanagement.infrastructure.controller;
 import com.postech.restaurantmanagement.domain.exception.BusinessException;
 import com.postech.restaurantmanagement.domain.exception.EntityValidationException;
 import com.postech.restaurantmanagement.domain.exception.ResourceAlreadyExistsException;
+import com.postech.restaurantmanagement.domain.exception.ResourceNotFoundException;
 import com.postech.restaurantmanagement.infrastructure.controller.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -24,6 +25,13 @@ public class GlobalExceptionHandler {
             ResourceAlreadyExistsException ex,
             HttpServletRequest request) {
         return build(HttpStatus.CONFLICT, ex.getMessage(), request.getRequestURI());
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleResourceNotFound(
+            ResourceNotFoundException ex,
+            HttpServletRequest request) {
+        return build(HttpStatus.NOT_FOUND, ex.getMessage(), request.getRequestURI());
     }
 
     @ExceptionHandler({EntityValidationException.class, IllegalArgumentException.class})
@@ -71,4 +79,3 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(status).body(body);
     }
 }
-

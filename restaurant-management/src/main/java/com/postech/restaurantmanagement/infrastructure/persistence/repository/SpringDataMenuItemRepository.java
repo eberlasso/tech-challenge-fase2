@@ -15,4 +15,6 @@ public interface SpringDataMenuItemRepository extends JpaRepository<MenuItemEnti
     List<MenuItemEntity> findByRestaurantId(Long restaurantId);
 
     boolean existsByNameIgnoreCaseAndRestaurantId(String name, Long restaurantId);
+
+    boolean existsByNameIgnoreCaseAndRestaurantIdAndIdNot(String name, Long restaurantId, Long id);
 }

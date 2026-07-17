@@ -21,7 +21,7 @@ import org.springframework.web.context.WebApplicationContext;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -78,23 +78,87 @@ class ApiE2EH2IntegrationTest {
     void shouldCreateUserRestaurantAndMenuItemEndToEnd() throws Exception {
         Long ownerId = createUser("owner1@email.com");
         Long restaurantId = createRestaurant("Bistro Paris", "Main St 10", ownerId);
+        Long menuItemId = createMenuItem("Risotto", restaurantId);
 
-        String menuPayload = "{" +
-                "\"name\":\"Risotto\"," +
-                "\"description\":\"Creamy rice\"," +
-                "\"price\":59.90," +
-                "\"availableOnlyInRestaurant\":true," +
-                "\"imagePath\":\"/img/risotto.jpg\"," +
+        mockMvc.perform(get("/api/v1/users"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value(ownerId));
+
+        mockMvc.perform(get("/api/v1/users/{id}", ownerId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(ownerId));
+
+        String updatedUserPayload = "{" +
+                "\"name\":\"Owner Updated\"," +
+                "\"email\":\"owner1@email.com\"," +
+                "\"password\":\"StrongPass@123\"," +
+                "\"phoneNumber\":\"11988887777\"," +
+                "\"roles\":[\"RESTAURANT_OWNER\"]" +
+                "}";
+
+        mockMvc.perform(put("/api/v1/users/{id}", ownerId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(updatedUserPayload))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Owner Updated"));
+
+        mockMvc.perform(get("/api/v1/restaurants"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value(restaurantId));
+
+        mockMvc.perform(get("/api/v1/restaurants/{id}", restaurantId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(restaurantId));
+
+        String updatedRestaurantPayload = "{" +
+                "\"name\":\"Bistro Paris Updated\"," +
+                "\"address\":\"Main St 10\"," +
+                "\"cuisineType\":\"Italian\"," +
+                "\"operatingHours\":\"11:00-23:00\"," +
+                "\"ownerId\":" + ownerId +
+                "}";
+
+        mockMvc.perform(put("/api/v1/restaurants/{id}", restaurantId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(updatedRestaurantPayload))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Bistro Paris Updated"));
+
+        mockMvc.perform(get("/api/v1/menu-items"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value(menuItemId));
+
+        mockMvc.perform(get("/api/v1/menu-items").param("restaurantId", String.valueOf(restaurantId)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].restaurantId").value(restaurantId));
+
+        mockMvc.perform(get("/api/v1/menu-items/{id}", menuItemId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(menuItemId));
+
+        String updatedMenuPayload = "{" +
+                "\"name\":\"Risotto Updated\"," +
+                "\"description\":\"Creamy rice updated\"," +
+                "\"price\":61.90," +
+                "\"availableOnlyInRestaurant\":false," +
+                "\"imagePath\":\"/img/risotto-new.jpg\"," +
                 "\"restaurantId\":" + restaurantId +
                 "}";
 
-        mockMvc.perform(post("/api/v1/menu-items")
+        mockMvc.perform(put("/api/v1/menu-items/{id}", menuItemId)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(menuPayload))
-                .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.name").value("Risotto"))
-                .andExpect(jsonPath("$.restaurantId").value(restaurantId));
+                        .content(updatedMenuPayload))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Risotto Updated"));
+
+        mockMvc.perform(delete("/api/v1/menu-items/{id}", menuItemId))
+                .andExpect(status().isNoContent());
+
+        mockMvc.perform(delete("/api/v1/restaurants/{id}", restaurantId))
+                .andExpect(status().isNoContent());
+
+        mockMvc.perform(delete("/api/v1/users/{id}", ownerId))
+                .andExpect(status().isNoContent());
     }
 
     @Test
@@ -207,6 +271,25 @@ class ApiE2EH2IntegrationTest {
         return extractId(result.getResponse().getContentAsString());
     }
 
+    private Long createMenuItem(String name, Long restaurantId) throws Exception {
+        String payload = "{" +
+                "\"name\":\"" + name + "\"," +
+                "\"description\":\"Creamy rice\"," +
+                "\"price\":59.90," +
+                "\"availableOnlyInRestaurant\":true," +
+                "\"imagePath\":\"/img/risotto.jpg\"," +
+                "\"restaurantId\":" + restaurantId +
+                "}";
+
+        MvcResult result = mockMvc.perform(post("/api/v1/menu-items")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payload))
+                .andExpect(status().isCreated())
+                .andReturn();
+
+        return extractId(result.getResponse().getContentAsString());
+    }
+
     private Long extractId(String json) {
         Matcher matcher = Pattern.compile("\"id\"\\s*:\\s*(\\d+)").matcher(json);
         if (!matcher.find()) {
@@ -215,4 +298,3 @@ class ApiE2EH2IntegrationTest {
         return Long.parseLong(matcher.group(1));
     }
 }
-

@@ -313,6 +313,15 @@ Cadastra um novo usuário no sistema.
 | `400` | Dados inválidos (email mal formatado, roles vazio, campos em branco) |
 | `409` | E-mail já cadastrado |
 
+**Outros endpoints de Users:**
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `GET` | `/api/v1/users` | Lista todos os usuários |
+| `GET` | `/api/v1/users/{id}` | Busca usuário por ID |
+| `PUT` | `/api/v1/users/{id}` | Atualiza usuário |
+| `DELETE` | `/api/v1/users/{id}` | Remove usuário |
+
 ---
 
 ### 🍴 Restaurants — `POST /api/v1/restaurants`
@@ -347,6 +356,15 @@ Cadastra um novo restaurante associado a um usuário dono.
 | `201` | Restaurante criado com sucesso |
 | `400` | Dados inválidos ou dono não encontrado |
 | `409` | Restaurante com mesmo nome e endereço já existe |
+
+**Outros endpoints de Restaurants:**
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `GET` | `/api/v1/restaurants` | Lista todos os restaurantes |
+| `GET` | `/api/v1/restaurants/{id}` | Busca restaurante por ID |
+| `PUT` | `/api/v1/restaurants/{id}` | Atualiza restaurante |
+| `DELETE` | `/api/v1/restaurants/{id}` | Remove restaurante |
 
 ---
 
@@ -384,6 +402,16 @@ Cadastra um item do cardápio para um restaurante.
 | `201` | Item criado com sucesso |
 | `400` | Preço inválido (zero/negativo), restaurante não encontrado, campos em branco |
 | `409` | Item com mesmo nome já existe no restaurante |
+
+**Outros endpoints de Menu Items:**
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `GET` | `/api/v1/menu-items` | Lista todos os itens |
+| `GET` | `/api/v1/menu-items/{id}` | Busca item por ID |
+| `GET` | `/api/v1/menu-items?restaurantId={id}` | Lista itens por restaurante |
+| `PUT` | `/api/v1/menu-items/{id}` | Atualiza item |
+| `DELETE` | `/api/v1/menu-items/{id}` | Remove item |
 
 ---
 

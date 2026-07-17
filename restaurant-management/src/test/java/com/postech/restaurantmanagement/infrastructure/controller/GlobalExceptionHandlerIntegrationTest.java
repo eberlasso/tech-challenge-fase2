@@ -3,6 +3,7 @@ package com.postech.restaurantmanagement.infrastructure.controller;
 import com.postech.restaurantmanagement.domain.exception.EntityValidationException;
 import com.postech.restaurantmanagement.domain.exception.BusinessException;
 import com.postech.restaurantmanagement.domain.exception.ResourceAlreadyExistsException;
+import com.postech.restaurantmanagement.domain.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.MediaType;
@@ -36,6 +37,11 @@ class GlobalExceptionHandlerIntegrationTest {
             throw new EntityValidationException("invalid payload");
         }
 
+        @GetMapping("/not-found")
+        public String notFound() {
+            throw new ResourceNotFoundException("not found");
+        }
+
         @GetMapping("/integrity")
         public String integrity() {
             throw new DataIntegrityViolationException("integrity", new RuntimeException("duplicate key"));
@@ -67,6 +73,10 @@ class GlobalExceptionHandlerIntegrationTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.message").value("invalid payload"));
 
+        mvc.perform(get("/not-found").contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.message").value("not found"));
+
         mvc.perform(get("/integrity").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isConflict())
                 .andExpect(jsonPath("$.message").exists());
@@ -80,4 +90,3 @@ class GlobalExceptionHandlerIntegrationTest {
                 .andExpect(jsonPath("$.message").value("business error"));
     }
 }
-

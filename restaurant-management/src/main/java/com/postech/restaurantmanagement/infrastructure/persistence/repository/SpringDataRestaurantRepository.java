@@ -16,4 +16,6 @@ public interface SpringDataRestaurantRepository extends JpaRepository<Restaurant
     List<RestaurantEntity> findByCuisineType(String cuisineType);
 
     boolean existsByNameIgnoreCaseAndAddressIgnoreCase(String name, String address);
+
+    boolean existsByNameIgnoreCaseAndAddressIgnoreCaseAndIdNot(String name, String address, Long id);
 }
