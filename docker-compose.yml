@@ -1,6 +1,26 @@
-version: '3.8'
 
 services:
+  restaurant-app:
+    build:
+      context: ./restaurant-management
+      dockerfile: Dockerfile
+    container_name: restaurant_management_app
+    env_file:
+      - .env
+    environment:
+      DB_HOST: postgres-db
+      MONGO_HOST: mongodb
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - restaurant-network
+
   postgres-db:
     image: postgres:15.10  # Versão mais específica e estável
     container_name: postgres_db_restaurant

@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:restaurant_test;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration-h2
+    validate-on-migrate: false
+
+  mongodb:
+    uri: mongodb://localhost:27017/db_restaurant_audits_test
+
