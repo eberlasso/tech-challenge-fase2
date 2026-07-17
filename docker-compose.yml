@@ -18,11 +18,13 @@ services:
       mongodb:
         condition: service_started
     restart: unless-stopped
+    tty: true
+    stdin_open: true
     networks:
       - restaurant-network
 
   postgres-db:
-    image: postgres:15.10  # Versão mais específica e estável
+    image: postgres:15.10
     container_name: postgres_db_restaurant
     environment:
       POSTGRES_USER: ${DB_USER}
