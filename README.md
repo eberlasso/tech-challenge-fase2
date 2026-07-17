@@ -99,7 +99,7 @@ Esta é a **Fase 2** do Tech Challenge, que expande o sistema com:
 - ✅ **Auditoria** de operações via MongoDB
 - ✅ Documentação OpenAPI / Swagger
 - ✅ Infraestrutura completa com **Docker Compose**
-- ✅ Cobertura de testes ≥ 80% (JaCoCo)
+- ✅ Cobertura de testes ≥ 95% (JaCoCo)
 
 ---
 
@@ -149,7 +149,7 @@ O projeto segue os princípios da **Clean Architecture**, com separação estrit
 | Flyway | 10.x | Versionamento do schema |
 | MapStruct | 1.6.x | Mapeamento de objetos |
 | springdoc-openapi | 2.8.5 | Documentação OpenAPI 3 |
-| JaCoCo | 0.8.12 | Cobertura de testes |
+| JaCoCo | 0.8.14 | Cobertura de testes |
 | JUnit 5 + Mockito | — | Testes unitários |
 | H2 | — | Banco em memória para testes |
 | Docker + Docker Compose | — | Infraestrutura |
@@ -587,7 +587,7 @@ cd restaurant-management
 
 ### Cobertura (JaCoCo)
 
-- **Meta:** ≥ 80% de cobertura de linhas (configurado para 100% excluindo interfaces)
+- **Meta:** ≥ 95% de cobertura de linhas
 - **Verificação:** executada automaticamente na fase `verify` do Maven
 - **Exclusões:** interfaces de gateway, interfaces OpenAPI, interfaces Spring Data
 
