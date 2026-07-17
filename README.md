@@ -4,6 +4,42 @@
 
 ---
 
+## 🔗 Repositório
+
+```
+https://github.com/eberlasso/tech-challenge-fase2.git
+```
+
+---
+
+## 🚀 Início Rápido (Para Avaliadores)
+
+> Pré-requisito: ter **Docker** e **Docker Compose** instalados.
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/eberlasso/tech-challenge-fase2.git
+cd tech-challenge-fase2
+
+# 2. Suba todos os containers (aplicação + PostgreSQL + MongoDB)
+docker compose up -d --build
+
+# 3. Acompanhe os logs até a aplicação estar pronta
+docker compose logs -f restaurant-app
+```
+
+Quando aparecer `Started RestaurantManagementApplication`, acesse:
+
+| Recurso | URL |
+|---------|-----|
+| 🌐 API Base | `http://localhost:8080/restaurant/api/v1` |
+| 📖 Swagger UI | `http://localhost:8080/restaurant/swagger-ui/index.html` |
+| 📋 OpenAPI JSON | `http://localhost:8080/restaurant/v3/api-docs` |
+
+> O arquivo `.env` já está configurado com valores padrão — **não é necessário nenhuma configuração adicional** para rodar.
+
+---
+
 ## 📋 Índice
 
 1. [Sobre o Projeto](#sobre-o-projeto)
